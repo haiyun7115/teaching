@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>读取XML</title>
+	<style>
+		
+		.odiv{
+			position:relative;
+			width:1000px;
+			margin:0 auto;
+			overflow:hidden;
+		}	
+		span{
+			padding:10px;
+			background:gray;
+			float:left;
+			margin:5px;
+			cursor:pointer;
+		}
+		ul{
+			list-style:none;
+		}
+	</style>
+</head>
+<body>
+	<div class="odiv">
+		<input type='text' name='username' />
+		<ul></ul>
+	</div>
+	
+	<script src='common.js'></script>
+	<script>
+	
+	var reg = /[^\u4e00-\u9fa5]/;
+	var reg_1 = /^[\u4e00-\u9fa5]{2,}$/;
+	$('[name=username]').onchange = function(){
+		if(reg_1.test(this.value)){
+			console.log('正确');
+		}else{
+			console.log('错误');
+		}
+	}
+	$('[name=username]').onkeyup = function(){
+		//this.value = this.value.replace(reg,'')
+	}
+	$('.odiv').onclick = function(e){
+		var target = e.target;
+		
+		if(target.nodeName ==='SPAN'){
+			$('ul').innerHTML = '';
+			ajax('data/AccpStudent.xml',function(msg){
+				var classes=_('Class',msg);
+				var arr=[];
+				var element,li;
+				for(var i=0;i<classes.length;i++){
+					element = classes[i];
+					if(element.getAttribute('Name')===target.innerText){
+						arr = _('Student',element);
+						break;
+					}
+				}
+				for(var i=0;i<arr.length;i++){
+					li = document.createElement('li');
+					li.innerText = arr[i].innerHTML
+					$('ul').appendChild(li);
+				}
+			})
+		}
+	}
+	ajax('data/AccpStudent.xml',function(msg){
+		
+		var arr = [..._('Class',msg)];
+		var odiv=$('.odiv');
+		var element,span;
+		for(var i=0;i<arr.length;i++){
+			element = arr[i];
+			span = document.createElement('span');
+			span.innerText = element.getAttribute('Name')
+			//odiv.appendChild(span);
+			odiv.insertBefore(span,$('ul'));
+		}
+		
+	})
+	var arr = ['aa','bb','cc'];
+	console.log([...arr.keys()])
+	console.log([...arr.values()])
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

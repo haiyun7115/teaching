@@ -1,0 +1,1522 @@
+{
+    "code": 200,
+    "data": [{
+        "data": [{
+            "isparam": "A",
+            "data": [{
+                "isparam": "A",
+                "country": "AU",
+                "continent_cn": "大洋洲",
+                "countryname": "Australia",
+                "sdcn": "堪培拉",
+                "countrycn": "澳大利亚",
+                "sddataid": "HAU3528314912800",
+                "sden": "Canberra"
+            }]
+        },
+        {
+            "isparam": "F",
+            "data": [{
+                "isparam": "F",
+                "country": "FJ",
+                "continent_cn": "大洋洲",
+                "countryname": "Fiji",
+                "sdcn": "苏瓦",
+                "countrycn": "斐济",
+                "sddataid": "HFJ1814217844100",
+                "sden": "Suva"
+            }]
+        },
+        {
+            "isparam": "N",
+            "data": [{
+                "isparam": "N",
+                "country": "NC",
+                "continent_cn": "大洋洲",
+                "countryname": "New Caledonia",
+                "sdcn": "努美阿",
+                "countrycn": "新喀里多尼亚",
+                "sddataid": "HNC2227616645700",
+                "sden": "Noumea"
+            },
+            {
+                "isparam": "N",
+                "country": "NZ",
+                "continent_cn": "大洋洲",
+                "countryname": "New Zealand",
+                "sdcn": "惠灵顿",
+                "countrycn": "新西兰",
+                "sddataid": "HNZ4128717477600",
+                "sden": "Wellington"
+            }]
+        },
+        {
+            "isparam": "P",
+            "data": [{
+                "isparam": "P",
+                "country": "PG",
+                "continent_cn": "大洋洲",
+                "countryname": "Papua-Neuguinea",
+                "sdcn": "莫尔兹比港",
+                "countrycn": "巴布亚新几内亚",
+                "sddataid": "HPG9443147180000",
+                "sden": "Port Moresby"
+            }]
+        },
+        {
+            "isparam": "S",
+            "data": [{
+                "isparam": "S",
+                "country": "SB",
+                "continent_cn": "大洋洲",
+                "countryname": "Salomonen",
+                "sdcn": "霍尼亚拉",
+                "countrycn": "所罗门群岛",
+                "sddataid": "HSB9433159950000",
+                "sden": "Honiara"
+            },
+            {
+                "isparam": "S",
+                "country": "WS",
+                "continent_cn": "大洋洲",
+                "countryname": "Samoa",
+                "sdcn": "阿皮亚",
+                "countrycn": "西萨摩亚",
+                "sddataid": "HWS1383317176700",
+                "sden": "Apia"
+            }]
+        }],
+        "typeNum": "1",
+        "type": "大洋洲"
+    },
+    {
+        "data": [{
+            "isparam": "A",
+            "data": [{
+                "isparam": "A",
+                "country": "AW",
+                "continent_cn": "南美洲",
+                "countryname": "Aruba",
+                "sdcn": "奥拉涅斯塔德",
+                "countrycn": "阿鲁巴（荷）",
+                "sddataid": "HAW1252470027000",
+                "sden": "Oranjestad"
+            }]
+        },
+        {
+            "isparam": "B",
+            "data": [{
+                "isparam": "B",
+                "country": "BO",
+                "continent_cn": "南美洲",
+                "countryname": "Bolivia",
+                "sdcn": "苏克雷",
+                "countrycn": "玻利维亚",
+                "sddataid": "HBO1903365263000",
+                "sden": "Sucre"
+            },
+            {
+                "isparam": "B",
+                "country": "BR",
+                "continent_cn": "南美洲",
+                "countryname": "Brazil",
+                "sdcn": "巴西利亚",
+                "countrycn": "巴西",
+                "sddataid": "HBR1578479300000",
+                "sden": "Brasilia"
+            }]
+        },
+        {
+            "isparam": "C",
+            "data": [{
+                "isparam": "C",
+                "country": "CL",
+                "continent_cn": "南美洲",
+                "countryname": "Chile",
+                "sdcn": "圣地亚哥",
+                "countrycn": "智利",
+                "sddataid": "HCL3345770648000",
+                "sden": "Santiago"
+            },
+            {
+                "isparam": "C",
+                "country": "CO",
+                "continent_cn": "南美洲",
+                "countryname": "Colombia",
+                "sdcn": "波哥大",
+                "countrycn": "哥伦比亚",
+                "sddataid": "HCO4617408200000",
+                "sden": "Bogota"
+            }]
+        },
+        {
+            "isparam": "E",
+            "data": [{
+                "isparam": "E",
+                "country": "EC",
+                "continent_cn": "南美洲",
+                "countryname": "Ecuador",
+                "sdcn": "基多",
+                "countrycn": "厄瓜多尔",
+                "sddataid": "HEC2378525000000",
+                "sden": "Quito"
+            }]
+        },
+        {
+            "isparam": "G",
+            "data": [{
+                "isparam": "G",
+                "country": "GY",
+                "continent_cn": "南美洲",
+                "countryname": "Guyana",
+                "sdcn": "乔治敦",
+                "countrycn": "圭亚那",
+                "sddataid": "HGY6804581550000",
+                "sden": "Georgetown"
+            }]
+        },
+        {
+            "isparam": "P",
+            "data": [{
+                "isparam": "P",
+                "country": "PE",
+                "continent_cn": "南美洲",
+                "countryname": "Peru",
+                "sdcn": "利马",
+                "countrycn": "秘鲁",
+                "sddataid": "HPE1204377028000",
+                "sden": "Lima"
+            },
+            {
+                "isparam": "P",
+                "country": "PY",
+                "continent_cn": "南美洲",
+                "countryname": "Paraguay",
+                "sdcn": "亚松森",
+                "countrycn": "巴拉圭",
+                "sddataid": "HPY2530157636000",
+                "sden": "Asuncion"
+            }]
+        },
+        {
+            "isparam": "S",
+            "data": [{
+                "isparam": "S",
+                "country": "SR",
+                "continent_cn": "南美洲",
+                "countryname": "Suriname",
+                "sdcn": "帕拉马里博",
+                "countrycn": "苏里南",
+                "sddataid": "HSR5866551670000",
+                "sden": "Paramaribo"
+            }]
+        },
+        {
+            "isparam": "V",
+            "data": [{
+                "isparam": "V",
+                "country": "VE",
+                "continent_cn": "南美洲",
+                "countryname": "Venezuela",
+                "sdcn": "加拉加斯",
+                "countrycn": "委内瑞拉",
+                "sddataid": "HVE1048866879000",
+                "sden": "Caracas"
+            }]
+        }],
+        "typeNum": "2",
+        "type": "南美洲"
+    },
+    {
+        "data": [{
+            "isparam": "A",
+            "data": [{
+                "isparam": "A",
+                "country": "AZ",
+                "continent_cn": "亚洲",
+                "countryname": "Azerbaijan",
+                "sdcn": "巴库",
+                "countrycn": "阿塞拜疆",
+                "sddataid": "HAZ4037849892000",
+                "sden": "Baku"
+            },
+            {
+                "isparam": "A",
+                "country": "AM",
+                "continent_cn": "亚洲",
+                "countryname": "Armenia",
+                "sdcn": "埃里温",
+                "countrycn": "亚美尼亚",
+                "sddataid": "HAM4018144514000",
+                "sden": "Yerevan"
+            }]
+        },
+        {
+            "isparam": "B",
+            "data": [{
+                "isparam": "B",
+                "country": "BD",
+                "continent_cn": "亚洲",
+                "countryname": "Bangladesh",
+                "sdcn": "达卡",
+                "countrycn": "孟加拉",
+                "sddataid": "HBD2371904070000",
+                "sden": "Dhaka"
+            },
+            {
+                "isparam": "B",
+                "country": "CN",
+                "continent_cn": "亚洲",
+                "countryname": "Beijing",
+                "sdcn": "北京",
+                "countrycn": "北京",
+                "sddataid": "HCN1101000000000",
+                "sden": "Beijing"
+            }]
+        },
+        {
+            "isparam": "C",
+            "data": [{
+                "isparam": "C",
+                "country": "CY",
+                "continent_cn": "亚洲",
+                "countryname": "Cyprus",
+                "sdcn": "拉纳卡",
+                "countrycn": "塞浦路斯",
+                "sddataid": "HCY3492333623000",
+                "sden": "Larnaca"
+            }]
+        },
+        {
+            "isparam": "G",
+            "data": [{
+                "isparam": "G",
+                "country": "GE",
+                "continent_cn": "亚洲",
+                "countryname": "Georgia",
+                "sdcn": "第比利斯",
+                "countrycn": "格鲁吉亚",
+                "sddataid": "HGE4169444834000",
+                "sden": "Tbilisi"
+            }]
+        },
+        {
+            "isparam": "I",
+            "data": [{
+                "isparam": "I",
+                "country": "ID",
+                "continent_cn": "亚洲",
+                "countryname": "Indonesia",
+                "sdcn": "雅加达",
+                "countrycn": "印度尼西亚",
+                "sddataid": "HID6215106845000",
+                "sden": "Jakarta"
+            },
+            {
+                "isparam": "I",
+                "country": "IN",
+                "continent_cn": "亚洲",
+                "countryname": "India",
+                "sdcn": "新德里",
+                "countrycn": "印度",
+                "sddataid": "HIN2863677224000",
+                "sden": "New Delhi"
+            },
+            {
+                "isparam": "I",
+                "country": "IQ",
+                "continent_cn": "亚洲",
+                "countryname": "Iraq",
+                "sdcn": "巴格达",
+                "countrycn": "伊拉克",
+                "sddataid": "HIQ3334144401000",
+                "sden": "Baghdad"
+            },
+            {
+                "isparam": "I",
+                "country": "IR",
+                "continent_cn": "亚洲",
+                "countryname": "Iran",
+                "sdcn": "德黑兰",
+                "countrycn": "伊朗",
+                "sddataid": "HIR3569451422000",
+                "sden": "Tehran"
+            }]
+        },
+        {
+            "isparam": "J",
+            "data": [{
+                "isparam": "J",
+                "country": "JO",
+                "continent_cn": "亚洲",
+                "countryname": "Jordan",
+                "sdcn": "安曼",
+                "countrycn": "约旦",
+                "sddataid": "HJO3195535945000",
+                "sden": "Amman"
+            },
+            {
+                "isparam": "J",
+                "country": "JP",
+                "continent_cn": "亚洲",
+                "countryname": "Japan",
+                "sdcn": "东京",
+                "countrycn": "日本",
+                "sddataid": "HJP3569139692000",
+                "sden": "Tokyo"
+            }]
+        },
+        {
+            "isparam": "L",
+            "data": [{
+                "isparam": "L",
+                "country": "LA",
+                "continent_cn": "亚洲",
+                "countryname": "Laos",
+                "sdcn": "万象",
+                "countrycn": "老挝",
+                "sddataid": "HLA1796710260000",
+                "sden": "Vientiane"
+            },
+            {
+                "isparam": "L",
+                "country": "LB",
+                "continent_cn": "亚洲",
+                "countryname": "Lebanon",
+                "sdcn": "贝鲁特",
+                "countrycn": "黎巴嫩",
+                "sddataid": "HLB3388935494000",
+                "sden": "Beirut"
+            }]
+        },
+        {
+            "isparam": "M",
+            "data": [{
+                "isparam": "M",
+                "country": "MM",
+                "continent_cn": "亚洲",
+                "countryname": "Myanmar",
+                "sdcn": "仰光",
+                "countrycn": "缅甸",
+                "sddataid": "HMM1680596156000",
+                "sden": "Yangon"
+            },
+            {
+                "isparam": "M",
+                "country": "MV",
+                "continent_cn": "亚洲",
+                "countryname": "Maldives",
+                "sdcn": "马累",
+                "countrycn": "马尔代夫",
+                "sddataid": "HMV4175735090000",
+                "sden": "Male"
+            },
+            {
+                "isparam": "M",
+                "country": "MY",
+                "continent_cn": "亚洲",
+                "countryname": "Malaysia",
+                "sdcn": "吉隆坡",
+                "countrycn": "马来西亚",
+                "sddataid": "HMY3141101687000",
+                "sden": "Kuala Lumpur"
+            }]
+        },
+        {
+            "isparam": "N",
+            "data": [{
+                "isparam": "N",
+                "country": "KP",
+                "continent_cn": "亚洲",
+                "countryname": "North Korea",
+                "sdcn": "平壤",
+                "countrycn": "朝鲜",
+                "sddataid": "HKP3903412575400",
+                "sden": "Pyongyang"
+            },
+            {
+                "isparam": "N",
+                "country": "NP",
+                "continent_cn": "亚洲",
+                "countryname": "Nepal",
+                "sdcn": "加德满都",
+                "countrycn": "尼泊尔",
+                "sddataid": "HNP2770285321000",
+                "sden": "Kathmandu"
+            }]
+        },
+        {
+            "isparam": "O",
+            "data": [{
+                "isparam": "O",
+                "country": "OM",
+                "continent_cn": "亚洲",
+                "countryname": "Oman",
+                "sdcn": "马斯哈特",
+                "countrycn": "阿曼",
+                "sddataid": "HOM2358458408000",
+                "sden": "Muscat"
+            }]
+        },
+        {
+            "isparam": "P",
+            "data": [{
+                "isparam": "P",
+                "country": "PH",
+                "continent_cn": "亚洲",
+                "countryname": "Philippines",
+                "sdcn": "马尼拉",
+                "countrycn": "菲律宾",
+                "sddataid": "HPH1460412098200",
+                "sden": "Manila"
+            },
+            {
+                "isparam": "P",
+                "country": "PK",
+                "continent_cn": "亚洲",
+                "countryname": "Pakistan",
+                "sdcn": "伊斯兰堡",
+                "countrycn": "巴基斯坦",
+                "sddataid": "HPK3372173043000",
+                "sden": "Islamabad"
+            }]
+        },
+        {
+            "isparam": "Q",
+            "data": [{
+                "isparam": "Q",
+                "country": "QA",
+                "continent_cn": "亚洲",
+                "countryname": "Qatar",
+                "sdcn": "多哈",
+                "countrycn": "卡塔尔",
+                "sddataid": "HQA2527951522000",
+                "sden": "Doha"
+            }]
+        },
+        {
+            "isparam": "S",
+            "data": [{
+                "isparam": "S",
+                "country": "KR",
+                "continent_cn": "亚洲",
+                "countryname": "South Korea",
+                "sdcn": "首尔",
+                "countrycn": "韩国",
+                "sddataid": "HKR3756712697800",
+                "sden": "Seoul"
+            },
+            {
+                "isparam": "S",
+                "country": "LK",
+                "continent_cn": "亚洲",
+                "countryname": "SriLanka",
+                "sdcn": "科伦坡",
+                "countrycn": "斯里兰卡",
+                "sddataid": "HLK6932798480000",
+                "sden": "Colombo"
+            },
+            {
+                "isparam": "S",
+                "country": "SA",
+                "continent_cn": "亚洲",
+                "countryname": "Saudi Arabia",
+                "sdcn": "利雅得",
+                "countrycn": "沙特阿拉伯",
+                "sddataid": "HSA2468846722000",
+                "sden": "Riyadh"
+            },
+            {
+                "isparam": "S",
+                "country": "SG",
+                "continent_cn": "亚洲",
+                "countryname": "Singapore",
+                "sdcn": "新加坡",
+                "countrycn": "新加坡",
+                "sddataid": "HSG1291038500000",
+                "sden": "Singapore"
+            },
+            {
+                "isparam": "S",
+                "country": "SY",
+                "continent_cn": "亚洲",
+                "countryname": "Syria",
+                "sdcn": "大马士革",
+                "countrycn": "叙利亚",
+                "sddataid": "HSY3351362910000",
+                "sden": "Damascus"
+            }]
+        },
+        {
+            "isparam": "T",
+            "data": [{
+                "isparam": "T",
+                "country": "TH",
+                "continent_cn": "亚洲",
+                "countryname": "Thailand",
+                "sdcn": "曼谷",
+                "countrycn": "泰国",
+                "sddataid": "HTH1375410050100",
+                "sden": "Bangkok"
+            },
+            {
+                "isparam": "T",
+                "country": "TJ",
+                "continent_cn": "亚洲",
+                "countryname": "Tajikistan",
+                "sdcn": "杜尚别",
+                "countrycn": "塔吉克斯坦",
+                "sddataid": "HTJ3853668779000",
+                "sden": "Dushanbe"
+            },
+            {
+                "isparam": "T",
+                "country": "TM",
+                "continent_cn": "亚洲",
+                "countryname": "Turkmenistan",
+                "sdcn": "阿什哈巴德",
+                "countrycn": "土库曼斯坦",
+                "sddataid": "HTM3795583830000",
+                "sden": "Ashgabat"
+            }]
+        },
+        {
+            "isparam": "U",
+            "data": [{
+                "isparam": "U",
+                "country": "UZ",
+                "continent_cn": "亚洲",
+                "countryname": "Uzbekistan",
+                "sdcn": "塔什干",
+                "countrycn": "乌兹别克斯坦",
+                "sddataid": "HUZ4126569216000",
+                "sden": "Tashkent"
+            }]
+        },
+        {
+            "isparam": "Y",
+            "data": [{
+                "isparam": "Y",
+                "country": "PE",
+                "continent_cn": "亚洲",
+                "countryname": "Yemen",
+                "sdcn": "萨那",
+                "countrycn": "也门",
+                "sddataid": "HPE6919795820000",
+                "sden": "Sana"
+            }]
+        }],
+        "typeNum": "3",
+        "type": "亚洲"
+    },
+    {
+        "data": [{
+            "isparam": "A",
+            "data": [{
+                "isparam": "A",
+                "country": "DZ",
+                "continent_cn": "非洲",
+                "countryname": "Algeria",
+                "sdcn": "阿尔及尔",
+                "countrycn": "阿尔及利亚",
+                "sddataid": "HDZ3675230420000",
+                "sden": "Algiers"
+            },
+            {
+                "isparam": "A",
+                "country": "AO",
+                "continent_cn": "非洲",
+                "countryname": "Angola",
+                "sdcn": "罗安达",
+                "countrycn": "安哥拉",
+                "sddataid": "HAO8837132340000",
+                "sden": "Luanda"
+            }]
+        },
+        {
+            "isparam": "B",
+            "data": [{
+                "isparam": "B",
+                "country": "BF",
+                "continent_cn": "非洲",
+                "countryname": "Burkina faso",
+                "sdcn": "瓦加杜古",
+                "countrycn": "布基纳法索",
+                "sddataid": "HBF1236615340000",
+                "sden": "Ouagadougou"
+            },
+            {
+                "isparam": "B",
+                "country": "BI",
+                "continent_cn": "非洲",
+                "countryname": "Burundi",
+                "sdcn": "布琼布拉",
+                "countrycn": "布隆迪",
+                "sddataid": "HBI3382293640000",
+                "sden": "Bujumbura"
+            },
+            {
+                "isparam": "B",
+                "country": "BW",
+                "continent_cn": "非洲",
+                "countryname": "Botswana",
+                "sdcn": "哈博罗内",
+                "countrycn": "博茨瓦纳",
+                "sddataid": "HBW2465525909000",
+                "sden": "Gaborone"
+            }]
+        },
+        {
+            "isparam": "C",
+            "data": [{
+                "isparam": "C",
+                "country": "CF",
+                "continent_cn": "非洲",
+                "countryname": "Central Africa",
+                "sdcn": "班吉",
+                "countrycn": "中非",
+                "sddataid": "HCF4361185550000",
+                "sden": "Bangui"
+            },
+            {
+                "isparam": "C",
+                "country": "CV",
+                "continent_cn": "非洲",
+                "countryname": "Cape verde Islands",
+                "sdcn": "普腊亚",
+                "countrycn": "佛得角",
+                "sddataid": "HCV1493223513000",
+                "sden": "Praia"
+            },
+            {
+                "isparam": "C",
+                "country": "KM",
+                "continent_cn": "非洲",
+                "countryname": "Comores",
+                "sdcn": "莫洛尼",
+                "countrycn": "科摩罗",
+                "sddataid": "HKM1170243255000",
+                "sden": "Moroni"
+            }]
+        },
+        {
+            "isparam": "D",
+            "data": [{
+                "isparam": "D",
+                "country": "CD",
+                "continent_cn": "非洲",
+                "countryname": "Democratic Republic of the Congo",
+                "sdcn": "金沙萨",
+                "countrycn": "刚果（金）",
+                "sddataid": "HCD4328153140000",
+                "sden": "Kinshasa"
+            }]
+        },
+        {
+            "isparam": "E",
+            "data": [{
+                "isparam": "E",
+                "country": "EG",
+                "continent_cn": "非洲",
+                "countryname": "Egypt",
+                "sdcn": "开罗",
+                "countrycn": "埃及",
+                "sddataid": "HEG3006331250000",
+                "sden": "Cairo"
+            },
+            {
+                "isparam": "E",
+                "country": "ET",
+                "continent_cn": "非洲",
+                "countryname": "Ethiopia",
+                "sdcn": "亚的斯亚贝巴",
+                "countrycn": "埃塞俄比亚",
+                "sddataid": "HET9025387470000",
+                "sden": "Addis Ababa"
+            },
+            {
+                "isparam": "E",
+                "country": "GQ",
+                "continent_cn": "非洲",
+                "countryname": "Equatorial Guinea",
+                "sdcn": "马拉博",
+                "countrycn": "赤道几内亚",
+                "sddataid": "HGQ3758783000000",
+                "sden": "Malabo"
+            }]
+        },
+        {
+            "isparam": "G",
+            "data": [{
+                "isparam": "G",
+                "country": "GA",
+                "continent_cn": "非洲",
+                "countryname": "Gabon",
+                "sdcn": "利伯维尔",
+                "countrycn": "加蓬",
+                "sddataid": "HGA3929454000000",
+                "sden": "Libreville"
+            },
+            {
+                "isparam": "G",
+                "country": "GH",
+                "continent_cn": "非洲",
+                "countryname": "Ghana",
+                "sdcn": "阿克拉",
+                "countrycn": "加纳",
+                "sddataid": "HGH5556197000000",
+                "sden": "Accra"
+            },
+            {
+                "isparam": "G",
+                "country": "GM",
+                "continent_cn": "非洲",
+                "countryname": "Gambia",
+                "sdcn": "班珠尔",
+                "countrycn": "冈比亚",
+                "sddataid": "HGM1345316578000",
+                "sden": "Banjul"
+            },
+            {
+                "isparam": "G",
+                "country": "GN",
+                "continent_cn": "非洲",
+                "countryname": "Guinea",
+                "sdcn": "科纳克里",
+                "countrycn": "几内亚",
+                "sddataid": "HGN9538136770000",
+                "sden": "Conakry"
+            }]
+        },
+        {
+            "isparam": "K",
+            "data": [{
+                "isparam": "K",
+                "country": "KE",
+                "continent_cn": "非洲",
+                "countryname": "Kenya",
+                "sdcn": "内罗毕",
+                "countrycn": "肯尼亚",
+                "sddataid": "HKE1283368170000",
+                "sden": "Nairobi"
+            }]
+        },
+        {
+            "isparam": "L",
+            "data": [{
+                "isparam": "L",
+                "country": "LB",
+                "continent_cn": "非洲",
+                "countryname": "Libya",
+                "sdcn": "的黎波里",
+                "countrycn": "利比亚",
+                "sddataid": "HLB3443735850000",
+                "sden": "Tripoli"
+            }]
+        },
+        {
+            "isparam": "M",
+            "data": [{
+                "isparam": "M",
+                "country": "MA",
+                "continent_cn": "非洲",
+                "countryname": "Morocco",
+                "sdcn": "拉巴特",
+                "countrycn": "摩洛哥",
+                "sddataid": "HMA3401368330000",
+                "sden": "Rabat"
+            },
+            {
+                "isparam": "M",
+                "country": "ML",
+                "continent_cn": "非洲",
+                "countryname": "Mali",
+                "sdcn": "巴马科",
+                "countrycn": "马里",
+                "sddataid": "HML1265800000000",
+                "sden": "Bamako"
+            },
+            {
+                "isparam": "M",
+                "country": "MR",
+                "continent_cn": "非洲",
+                "countryname": "Mauritania",
+                "sdcn": "努瓦克肖特",
+                "countrycn": "毛里塔尼亚",
+                "sddataid": "HMR1808615978000",
+                "sden": "Nouakchott"
+            },
+            {
+                "isparam": "M",
+                "country": "MZ",
+                "continent_cn": "非洲",
+                "countryname": "Mozambique",
+                "sdcn": "马普托",
+                "countrycn": "莫桑比克",
+                "sddataid": "HMZ2596632583000",
+                "sden": "Maputo"
+            }]
+        },
+        {
+            "isparam": "N",
+            "data": [{
+                "isparam": "N",
+                "country": "NA",
+                "continent_cn": "非洲",
+                "countryname": "Namibia",
+                "sdcn": "温得和克",
+                "countrycn": "纳米比亚",
+                "sddataid": "HNA2255917083000",
+                "sden": "Windhoek"
+            },
+            {
+                "isparam": "N",
+                "country": "NE",
+                "continent_cn": "非洲",
+                "countryname": "Niger",
+                "sdcn": "尼亚美",
+                "countrycn": "尼日尔",
+                "sddataid": "HNE1351421100000",
+                "sden": "Niamey"
+            },
+            {
+                "isparam": "N",
+                "country": "NG",
+                "continent_cn": "非洲",
+                "countryname": "Nigeria",
+                "sdcn": "阿布贾",
+                "countrycn": "尼日利亚",
+                "sddataid": "HNG9058749500000",
+                "sden": "Abuja"
+            }]
+        },
+        {
+            "isparam": "R",
+            "data": [{
+                "isparam": "R",
+                "country": "RW",
+                "continent_cn": "非洲",
+                "countryname": "Rwanda",
+                "sdcn": "基加利",
+                "countrycn": "卢旺达",
+                "sddataid": "HRW1953005900000",
+                "sden": "Kigali"
+            }]
+        },
+        {
+            "isparam": "S",
+            "data": [{
+                "isparam": "S",
+                "country": "SN",
+                "continent_cn": "非洲",
+                "countryname": "Senegal",
+                "sdcn": "达喀尔",
+                "countrycn": "塞内加尔",
+                "sddataid": "HSN1469417444000",
+                "sden": "Dakar"
+            },
+            {
+                "isparam": "S",
+                "country": "ZA",
+                "continent_cn": "非洲",
+                "countryname": "South Africa",
+                "sdcn": "比勒陀利亚",
+                "countrycn": "南非",
+                "sddataid": "HZA2574528188000",
+                "sden": "Pretoria"
+            }]
+        },
+        {
+            "isparam": "T",
+            "data": [{
+                "isparam": "T",
+                "country": "CF",
+                "continent_cn": "非洲",
+                "countryname": "The Central African Republic",
+                "sdcn": "班吉",
+                "countrycn": "中非",
+                "sddataid": "HCF4361185550000",
+                "sden": "Bangui"
+            },
+            {
+                "isparam": "T",
+                "country": "CG",
+                "continent_cn": "非洲",
+                "countryname": "The Republic of Congo",
+                "sdcn": "布拉柴维尔",
+                "countrycn": "刚果（布）",
+                "sddataid": "HCG4266152830000",
+                "sden": "Brazzaville"
+            },
+            {
+                "isparam": "T",
+                "country": "TG",
+                "continent_cn": "非洲",
+                "countryname": "Togo",
+                "sdcn": "洛美",
+                "countrycn": "多哥",
+                "sddataid": "HTG6137121200000",
+                "sden": "Lome"
+            },
+            {
+                "isparam": "T",
+                "country": "TN",
+                "continent_cn": "非洲",
+                "countryname": "Tunisia",
+                "sdcn": "突尼斯",
+                "countrycn": "突尼斯",
+                "sddataid": "HTN3681910166000",
+                "sden": "Tunis"
+            },
+            {
+                "isparam": "T",
+                "country": "TZ",
+                "continent_cn": "非洲",
+                "countryname": "Tansania",
+                "sdcn": "多多玛",
+                "countrycn": "坦桑尼亚",
+                "sddataid": "HTZ6172357390000",
+                "sden": "Dodoma"
+            }]
+        },
+        {
+            "isparam": "U",
+            "data": [{
+                "isparam": "U",
+                "country": "UG",
+                "continent_cn": "非洲",
+                "countryname": "Uganda",
+                "sdcn": "坎帕拉",
+                "countrycn": "乌干达",
+                "sddataid": "HUG3163258200000",
+                "sden": "Kampala"
+            }]
+        },
+        {
+            "isparam": "W",
+            "data": [{
+                "isparam": "W",
+                "country": "EH",
+                "continent_cn": "非洲",
+                "countryname": "Western Sahara",
+                "sdcn": "达赫莱",
+                "countrycn": "西撒哈拉",
+                "sddataid": "HEH2368515958000",
+                "sden": "Dakhla"
+            }]
+        },
+        {
+            "isparam": "Z",
+            "data": [{
+                "isparam": "Z",
+                "country": "ZW",
+                "continent_cn": "非洲",
+                "countryname": "Zimbabwe",
+                "sdcn": "哈拉雷",
+                "countrycn": "津巴布韦",
+                "sddataid": "HZW1782831053000",
+                "sden": "Harare"
+            }]
+        }],
+        "typeNum": "4",
+        "type": "非洲"
+    },
+    {
+        "data": [{
+            "isparam": "A",
+            "data": [{
+                "isparam": "A",
+                "country": "GB",
+                "continent_cn": "北美洲",
+                "countryname": "Anguilla",
+                "sdcn": "瓦利",
+                "countrycn": "安圭拉",
+                "sddataid": "HGB5325245360000",
+                "sden": "Valley"
+            },
+            {
+                "isparam": "A",
+                "country": "US",
+                "continent_cn": "北美洲",
+                "countryname": "America",
+                "sdcn": "华盛顿",
+                "countrycn": "美国",
+                "sddataid": "HUS3871378159000",
+                "sden": "Washington"
+            }]
+        },
+        {
+            "isparam": "B",
+            "data": [{
+                "isparam": "B",
+                "country": "BB",
+                "continent_cn": "北美洲",
+                "countryname": "Barbados",
+                "sdcn": "布里奇敦",
+                "countrycn": "巴巴多斯",
+                "sddataid": "HBB1315961700000",
+                "sden": "Bridgetown"
+            },
+            {
+                "isparam": "B",
+                "country": "BS",
+                "continent_cn": "北美洲",
+                "countryname": "Bahamas",
+                "sdcn": "拿骚",
+                "countrycn": "巴哈马",
+                "sddataid": "HBS2505877343000",
+                "sden": "Nassau"
+            },
+            {
+                "isparam": "B",
+                "country": "BZ",
+                "continent_cn": "北美洲",
+                "countryname": "Belize",
+                "sdcn": "贝尔莫潘",
+                "countrycn": "伯利兹",
+                "sddataid": "HBZ1725887670000",
+                "sden": "Belmopan"
+            }]
+        },
+        {
+            "isparam": "C",
+            "data": [{
+                "isparam": "C",
+                "country": "CA",
+                "continent_cn": "北美洲",
+                "countryname": "Canada",
+                "sdcn": "渥太华",
+                "countrycn": "加拿大",
+                "sddataid": "HCA4541175698000",
+                "sden": "Ottawa"
+            },
+            {
+                "isparam": "C",
+                "country": "CR",
+                "continent_cn": "北美洲",
+                "countryname": "Costa Rica",
+                "sdcn": "圣何塞",
+                "countrycn": "哥斯达黎加",
+                "sddataid": "HCR9933840830000",
+                "sden": "San Jose"
+            },
+            {
+                "isparam": "C",
+                "country": "CU",
+                "continent_cn": "北美洲",
+                "countryname": "Cuba",
+                "sdcn": "哈瓦那",
+                "countrycn": "古巴",
+                "sddataid": "HCU2313382383000",
+                "sden": "Havana"
+            },
+            {
+                "isparam": "C",
+                "country": "US",
+                "continent_cn": "北美洲",
+                "countryname": "Cayman Islands",
+                "sdcn": "乔治敦",
+                "countrycn": "开曼群岛（英）",
+                "sddataid": "HUS3886683904000",
+                "sden": "Georgetown"
+            }]
+        },
+        {
+            "isparam": "D",
+            "data": [{
+                "isparam": "D",
+                "country": "DO",
+                "continent_cn": "北美洲",
+                "countryname": "Dominican Republic",
+                "sdcn": "圣多明戈",
+                "countrycn": "多米尼加",
+                "sddataid": "HDO1856998900000",
+                "sden": "Santo Domingo"
+            }]
+        },
+        {
+            "isparam": "E",
+            "data": [{
+                "isparam": "E",
+                "country": "SV",
+                "continent_cn": "北美洲",
+                "countryname": "El Salvador",
+                "sdcn": "阿卡胡特拉",
+                "countrycn": "萨尔瓦多",
+                "sddataid": "HSV1359389828000",
+                "sden": "Acajutla"
+            }]
+        },
+        {
+            "isparam": "G",
+            "data": [{
+                "isparam": "G",
+                "country": "GT",
+                "continent_cn": "北美洲",
+                "countryname": "Guatemala",
+                "sdcn": "危地马拉",
+                "countrycn": "危地马拉",
+                "sddataid": "HGT1464190513000",
+                "sden": "Guatemala City"
+            }]
+        },
+        {
+            "isparam": "J",
+            "data": [{
+                "isparam": "J",
+                "country": "JM",
+                "continent_cn": "北美洲",
+                "countryname": "Jamaica",
+                "sdcn": "金斯顿",
+                "countrycn": "牙买加",
+                "sddataid": "HJM1799776794000",
+                "sden": "Kingston"
+            }]
+        },
+        {
+            "isparam": "M",
+            "data": [{
+                "isparam": "M",
+                "country": "MX",
+                "continent_cn": "北美洲",
+                "countryname": "Mexico",
+                "sdcn": "墨西哥城",
+                "countrycn": "墨西哥",
+                "sddataid": "HMX1942899128000",
+                "sden": "Mexico City"
+            }]
+        },
+        {
+            "isparam": "P",
+            "data": [{
+                "isparam": "P",
+                "country": "PR",
+                "continent_cn": "北美洲",
+                "countryname": "Puerto Rico",
+                "sdcn": "圣胡安",
+                "countrycn": "波多黎各",
+                "sddataid": "HPR1846666106000",
+                "sden": "San Juan"
+            }]
+        },
+        {
+            "isparam": "S",
+            "data": [{
+                "isparam": "S",
+                "country": "KN",
+                "continent_cn": "北美洲",
+                "countryname": "Saint Kitts and Nevis",
+                "sdcn": "巴斯特尔",
+                "countrycn": "圣基茨和尼维斯",
+                "sddataid": "HKN1729562726000",
+                "sden": "Basseterre"
+            },
+            {
+                "isparam": "S",
+                "country": "VC",
+                "continent_cn": "北美洲",
+                "countryname": "Saint Vincent and the Grenadines",
+                "sdcn": "金斯顿",
+                "countrycn": "圣文森特和格林纳丁斯",
+                "sddataid": "HVC1315961225000",
+                "sden": "Kingstown"
+            }]
+        },
+        {
+            "isparam": "T",
+            "data": [{
+                "isparam": "T",
+                "country": "BM",
+                "continent_cn": "北美洲",
+                "countryname": "the Bermuda Islands",
+                "sdcn": "哈密尔顿",
+                "countrycn": "百慕大群岛（英）",
+                "sddataid": "HBM3229564783000",
+                "sden": "Hamilton"
+            }]
+        }],
+        "typeNum": "5",
+        "type": "北美洲"
+    },
+    {
+        "data": [{
+            "isparam": "A",
+            "data": [{
+                "isparam": "A",
+                "country": "AL",
+                "continent_cn": "欧洲",
+                "countryname": "Albania",
+                "sdcn": "地拉那",
+                "countrycn": "阿尔巴尼亚",
+                "sddataid": "HAL4132819819000",
+                "sden": "Tirana"
+            },
+            {
+                "isparam": "A",
+                "country": "AT",
+                "continent_cn": "欧洲",
+                "countryname": "Austria",
+                "sdcn": "维也纳",
+                "countrycn": "奥地利",
+                "sddataid": "HAT4820816372000",
+                "sden": "Vienna"
+            }]
+        },
+        {
+            "isparam": "B",
+            "data": [{
+                "isparam": "B",
+                "country": "BY",
+                "continent_cn": "欧洲",
+                "countryname": "Belarus",
+                "sdcn": "明斯克",
+                "countrycn": "白俄罗斯",
+                "sddataid": "HBY5392756700000",
+                "sden": "Minsk"
+            }]
+        },
+        {
+            "isparam": "C",
+            "data": [{
+                "isparam": "C",
+                "country": "HR",
+                "continent_cn": "欧洲",
+                "countryname": "Croatia",
+                "sdcn": "萨格勒布",
+                "countrycn": "克罗地亚",
+                "sddataid": "HHR4581415978000",
+                "sden": "Zagreb"
+            }]
+        },
+        {
+            "isparam": "D",
+            "data": [{
+                "isparam": "D",
+                "country": "DK",
+                "continent_cn": "欧洲",
+                "countryname": "Denmark",
+                "sdcn": "哥本哈根",
+                "countrycn": "丹麦",
+                "sddataid": "HDK5567612566000",
+                "sden": "Copenhagen"
+            }]
+        },
+        {
+            "isparam": "E",
+            "data": [{
+                "isparam": "E",
+                "country": "EE",
+                "continent_cn": "欧洲",
+                "countryname": "Esthonia",
+                "sdcn": "塔林",
+                "countrycn": "爱沙尼亚",
+                "sddataid": "HEE5943724754000",
+                "sden": "Tallinn"
+            }]
+        },
+        {
+            "isparam": "F",
+            "data": [{
+                "isparam": "F",
+                "country": "FI",
+                "continent_cn": "欧洲",
+                "countryname": "Finland",
+                "sdcn": "赫尔辛基",
+                "countrycn": "芬兰",
+                "sddataid": "HFI6017249350000",
+                "sden": "Helsinki"
+            },
+            {
+                "isparam": "F",
+                "country": "FR",
+                "continent_cn": "欧洲",
+                "countryname": "France",
+                "sdcn": "巴黎",
+                "countrycn": "法国",
+                "sddataid": "HFR4885323490000",
+                "sden": "Paris"
+            }]
+        },
+        {
+            "isparam": "G",
+            "data": [{
+                "isparam": "G",
+                "country": "DE",
+                "continent_cn": "欧洲",
+                "countryname": "Germanyy",
+                "sdcn": "柏林",
+                "countrycn": "德国",
+                "sddataid": "HDE5252413411000",
+                "sden": "Berlin"
+            },
+            {
+                "isparam": "G",
+                "country": "GI",
+                "continent_cn": "欧洲",
+                "countryname": "Gibraltar",
+                "sdcn": "直布罗陀",
+                "countrycn": "直布罗陀",
+                "sddataid": "HGI3614553530000",
+                "sden": "Gibraltar"
+            },
+            {
+                "isparam": "G",
+                "country": "GR",
+                "continent_cn": "欧洲",
+                "countryname": "Greece",
+                "sdcn": "雅典",
+                "countrycn": "希腊",
+                "sddataid": "HGR3797923716000",
+                "sden": "Athens"
+            }]
+        },
+        {
+            "isparam": "H",
+            "data": [{
+                "isparam": "H",
+                "country": "NL",
+                "continent_cn": "欧洲",
+                "countryname": "Holland",
+                "sdcn": "阿姆斯特丹",
+                "countrycn": "荷兰",
+                "sddataid": "HNL5237448900000",
+                "sden": "Amsterdam"
+            }]
+        },
+        {
+            "isparam": "I",
+            "data": [{
+                "isparam": "I",
+                "country": "IT",
+                "continent_cn": "欧洲",
+                "countryname": "Italy",
+                "sdcn": "罗马",
+                "countrycn": "意大利",
+                "sddataid": "HIT4189212511000",
+                "sden": "Rome"
+            }]
+        },
+        {
+            "isparam": "L",
+            "data": [{
+                "isparam": "L",
+                "country": "LT",
+                "continent_cn": "欧洲",
+                "countryname": "Lithuania",
+                "sdcn": "维尔纽斯",
+                "countrycn": "立陶宛",
+                "sddataid": "HLT5468925280000",
+                "sden": "Vilnius"
+            },
+            {
+                "isparam": "L",
+                "country": "LV",
+                "continent_cn": "欧洲",
+                "countryname": "Latvia",
+                "sdcn": "里加",
+                "countrycn": "拉脱维亚",
+                "sddataid": "HLV5694624106000",
+                "sden": "Riga"
+            }]
+        },
+        {
+            "isparam": "M",
+            "data": [{
+                "isparam": "M",
+                "country": "MD",
+                "continent_cn": "欧洲",
+                "countryname": "Moldova",
+                "sdcn": "基希纳乌",
+                "countrycn": "摩尔多瓦",
+                "sddataid": "HMD4700628858000",
+                "sden": "Chisinau"
+            }]
+        },
+        {
+            "isparam": "P",
+            "data": [{
+                "isparam": "P",
+                "country": "PL",
+                "continent_cn": "欧洲",
+                "countryname": "Poland",
+                "sdcn": "华沙",
+                "countrycn": "波兰",
+                "sddataid": "HPL5223210120000",
+                "sden": "Warsaw"
+            },
+            {
+                "isparam": "P",
+                "country": "PT",
+                "continent_cn": "欧洲",
+                "countryname": "Portugal",
+                "sdcn": "里斯本",
+                "countrycn": "葡萄牙",
+                "sddataid": "HPT3871791330000",
+                "sden": "Lisbon"
+            }]
+        },
+        {
+            "isparam": "R",
+            "data": [{
+                "isparam": "R",
+                "country": "RU",
+                "continent_cn": "欧洲",
+                "countryname": "Russia",
+                "sdcn": "莫斯科",
+                "countrycn": "俄罗斯",
+                "sddataid": "HRU5575237616000",
+                "sden": "Moscow"
+            }]
+        },
+        {
+            "isparam": "S",
+            "data": [{
+                "isparam": "S",
+                "country": "ES",
+                "continent_cn": "欧洲",
+                "countryname": "Spain",
+                "sdcn": "马德里",
+                "countrycn": "西班牙",
+                "sddataid": "HES4041637030000",
+                "sden": "Madrid"
+            },
+            {
+                "isparam": "S",
+                "country": "SE",
+                "continent_cn": "欧洲",
+                "countryname": "Sweden",
+                "sdcn": "斯德哥尔摩",
+                "countrycn": "瑞典",
+                "sddataid": "HSE5933318065000",
+                "sden": "Stockholm"
+            }]
+        },
+        {
+            "isparam": "U",
+            "data": [{
+                "isparam": "U",
+                "country": "GB",
+                "continent_cn": "欧洲",
+                "countryname": "United Kindom",
+                "sdcn": "伦敦",
+                "countrycn": "英国",
+                "sddataid": "HGB5150912600000",
+                "sden": "London"
+            },
+            {
+                "isparam": "U",
+                "country": "UA",
+                "continent_cn": "欧洲",
+                "countryname": "Ukraine",
+                "sdcn": "基辅",
+                "countrycn": "乌克兰",
+                "sddataid": "HUA5045530524000",
+                "sden": "Kiev"
+            }]
+        }],
+        "typeNum": "6",
+        "type": "欧洲"
+    }],
+    "message": "successful",
+    "pageNum": null
+}

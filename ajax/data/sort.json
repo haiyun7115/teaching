@@ -1,0 +1,75 @@
+{
+    "code": 200,
+    "data": [{
+        "levelIndex": "优",
+        "districtcn": "彰化",
+        "AQI": "0",
+        "namecn": "彰化",
+        "provcn": "台湾"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "三沙",
+        "AQI": "0",
+        "namecn": "三沙",
+        "provcn": "海南"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "钓鱼岛",
+        "AQI": "0",
+        "namecn": "钓鱼岛",
+        "provcn": "福建"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "高雄",
+        "AQI": "0",
+        "namecn": "高雄",
+        "provcn": "台湾"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "图木舒克",
+        "AQI": "8",
+        "namecn": "图木舒克",
+        "provcn": "新疆"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "昆玉",
+        "AQI": "8",
+        "namecn": "昆玉",
+        "provcn": "新疆"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "阿拉尔",
+        "AQI": "8",
+        "namecn": "阿拉尔",
+        "provcn": "新疆"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "台东",
+        "AQI": "11",
+        "namecn": "台东",
+        "provcn": "台湾"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "屏东",
+        "AQI": "11",
+        "namecn": "屏东",
+        "provcn": "台湾"
+    },
+    {
+        "levelIndex": "优",
+        "districtcn": "宜兰",
+        "AQI": "13",
+        "namecn": "宜兰",
+        "provcn": "台湾"
+    }],
+    "message": "successful",
+    "pageNum": null
+}

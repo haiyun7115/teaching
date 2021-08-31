@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>ajax</title>
+<style>
+.odiv{
+	width:500px;
+	height:1000px;
+	margin:0 auto;
+}
+ul{
+	list-style:none;
+}
+
+
+</style>
+</head>
+<body>
+<div class='odiv'>
+	<button name='info_a' code="0">休闲娱乐</button>
+	<button name='info_b' code="1">生活服务</button>
+	<button name='info_c' code="2">其他类别</button>
+	<ul id='info'></ul>
+</div>
+
+<script src='common.js'></script>
+<script>
+	var info_a=$('[name=info_a]')
+	var info_b=$('[name=info_b]')
+	var info_c=$('[name=info_c]')
+	var ul = $('#info');
+	
+	info_a.onclick = function(){//休闲娱乐
+		getInfo(this.getAttribute('code'))
+	}
+	info_b.onclick = function(){//生活服务
+		getInfo(this.getAttribute('code'))
+	}
+	info_c.onclick = function(){//其他类别
+		getInfo(this.getAttribute('code'))
+	}
+	/*
+	 * @描述 根据code来获取数据
+	 * @函数 getInfo
+	 * @参数 code 数据中的下标
+	*/
+	function getInfo(code){
+		var element;
+		var li;
+		ul.innerHTML = '';
+		ajax('nav.json',function(msg){
+			element = msg[code].list;
+			for(var i=0;i<element.length;i++){
+				li=document.createElement('li');
+				li.innerHTML = element[i];
+				ul.appendChild(li);
+			}
+		})
+	}
+	
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

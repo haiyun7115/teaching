@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>天气</title>
+<style>
+.odiv{
+	width:800px;
+	margin:0 auto;
+	overflow:hidden;
+}
+.wea{
+	width:800px;
+	height:230px;
+	margin:0 auto;
+	overflow-x:auto;
+}
+
+.current{
+	float:left;
+	width:25%;
+	height:500px;
+
+}
+.forcast{
+	float:right;
+	width:74%;
+	height:500px;
+	overflow-x:auto;
+}
+.con{
+	height:100%;
+	width:1800px;
+}
+.list{
+	width:102px;
+	height:100%;
+	float:left;
+	margin-right:5px;
+	background:rgba(35,110,200,0.9);
+	position:relative;
+	text-align:center;
+	color:#fff;
+}
+.l-t{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:40%;
+}
+.l-m{
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	width:100%;
+	height:40%;
+}
+.for-24{
+	height:200px;
+	width:3000px;
+}
+
+</style>
+</head>
+<body>
+<div class='odiv'>
+	<div class='current'>
+		<p>
+			<span id='temperature'></span>
+			<span id='weather'></span>
+			<img src="" id='weatherPic' />
+		</p>
+		<p>
+			<span id='wind'></span>
+		</p>
+		<p>
+			<span id='nongLi'></span>
+		</p>
+		<p>
+			<span id='tips'></span>
+		</p>
+		<p>
+			<span id='report'></span>
+		</p>
+	</div>
+	<div class='forcast'>
+		<div class='con'>
+			
+		</div>
+	</div>
+</div>
+<div class='wea'>
+	<div class='for-24'>
+		
+	</div>
+</div>
+<span id='aa'></span>
+<script type='text/template' id='template'>
+<div class='list'>
+	<div class='l-t'>
+		<p>
+			<span name='week'>%week%</span>
+		</p>
+		<p>
+			<span name='forecasttime'>%forecasttime%</span>
+		</p>
+		<p>
+			<span name='weather_am'>%weather_am%</span>
+		</p>
+		<p>
+			<span name='weather_am_pic'>
+				<img src='img/%weather_am_pic%.png' />
+			</span>
+		</p>
+	</div>
+	<div class='l-m'>
+		<p>
+			<span name='weather_pm_pic'>
+				<img src='img/%weather_pm_pic%.png' />
+			</span>
+		</p>
+		<p>
+			<span name='winddir_pm'>%winddir_pm%</span>
+			<span name='windpower_pm'>%windpower_pm%</span>
+		</p>
+	</div>
+</div>
+
+</script>
+<script src='common.js'></script>
+<script>
+	/*
+	 * @描述 获取天气
+	 * @函数 getWeather
+	*/
+	function getWeather(){
+		var time = new Date();
+		//解决304的问题：加一个时间戳
+		//超时(timeout) 原因是后台网路慢或数据庞大
+		ajax('data/wea.json?time='+time.getTime(),function(msg){
+			var current = msg.data.current;
+			var forecast15d=msg.data.forecast15d;
+			var forecast24h=msg.data.forecast24h;
+			$('#temperature').innerText=current.current.temperature+'°C'
+			$('#weather').innerText= current.current.weather
+			$('#weatherPic').src = 'img/'+current.current.weatherPic+'.png'
+			$('#nongLi').innerText = current.nongLi
+			$('#tips').innerText = current.tips;
+			$('#wind').innerText=current.current.winddir+current.current.windpower
+			$('#report').innerText=current.current.reporttime;
+			forecast(forecast15d);
+			forcast24(forecast24h);
+		});		
+	}
+	
+	function forcast24(data){
+		var for_24=$('.for-24');
+		var arr = [];
+		var el;
+		for(var i=0;i<data.length;i++){
+			el = data[i];
+			arr.push(
+				`<div class='list'>
+					<p><span name='forecasttime'>${el.forecasttime}</span></p>
+					<p><span name='weatherPic'>
+						<img src='img/${el.weatherPic}.png' />
+					</span></p>
+					<p>
+						<span name='temperature'>${el.temperature}</span>
+					</p>
+					<p>
+						<span name='windDir'>${el.windDir}</span>
+						<span name='windPower'>${el.windPower}</span>
+					</p>
+				</div>`	
+			);
+		}
+		
+		for_24.innerHTML = arr.join('')
+	}
+	/*
+	 * @描述 预测天气
+	 * @函数 forecast
+	 * @参数 data 数据
+	*/
+	function forecast(data){
+		var con = $('.con');
+		var arr = [];
+		var template = $('#template').innerText;
+		var str = '';
+		var el;
+		for(var i=0;i<data.length;i++){
+			el = data[i];
+			str += template.replace(/%([\w]+)%/g,function(a,b){
+				return el[b]
+			})
+		}
+		//con.innerHTML = str;
+		
+		for(var i=0;i<data.length;i++){
+			el = data[i];
+			arr.push(
+				`<div class='list'>
+				<div class='l-t'>
+					<p>
+						<span name='week'>${el.week}</span>
+					</p>
+					<p>
+						<span name='forecasttime'>${el.forecasttime}</span>
+					</p>
+					<p>
+						<span name='weather_am'>${el.weather_am}</span>
+					</p>
+					<p>
+						<span name='weather_am_pic'>
+							<img src='img/${el.weather_am_pic}.png' />
+						</span>
+					</p>
+				</div>
+				<div class='l-m'>
+					<p>
+						<span name='weather_pm_pic'>
+							<img src='img/${el.weather_pm_pic}.png' />
+						</span>
+					</p>
+					<p>
+						<span name='winddir_pm'>${el.winddir_pm}</span>
+						<span name='windpower_pm'>${el.windpower_pm}</span>
+					</p>
+				</div>
+			</div>`
+			);
+		}
+		
+		
+		
+		
+		/*for(var i=0;i<data.length;i++){
+			el = data[i];
+			arr.push(
+				"<div class='list'>"+
+				"<div class='l-t'>"+
+					"<p>"+
+						"<span name='week'>"+el.week+"</span>"+
+					"</p>"+
+					"<p>"+
+						"<span name='forecasttime'>"+el.forecasttime+"</span>"+
+					"</p>"+
+					"<p>"+
+						"<span name='weather_am'>"+el.weather_am+"</span>"+
+					"</p>"+
+					"<p>"+
+						"<span name='weather_am_pic'>"+
+							"<img src='img/"+el.weather_am_pic+".png' />"+
+						"</span>"+
+					"</p>"+
+				"</div>"+
+				"<div class='l-m'>"+
+					"<p>"+
+						"<span name='weather_pm_pic'>"+
+							"<img src='img/"+el.weather_pm_pic+".png' />"+
+						"</span>"+
+					"</p>"+
+					"<p>"+
+						"<span name='winddir_pm'>"+el.winddir_pm+"</span>"+
+						"<span name='windpower_pm'>"+el.windpower_pm+"</span>"+
+					"</p>"+
+				"</div>"+
+			"</div>"
+			);
+		}*/
+		con.innerHTML = arr.join('');
+	}
+	
+	function init(){
+		getWeather();
+	}
+	
+	init();
+	ajax({
+		url : 'http://192.168.40.166:3000/weather/weather',
+		callback : function(msg){
+			console.log(msg)
+		}
+	})
+	/*ajax('http://192.168.40.166:3000/weather/weather',function(msg){
+		console.log(msg.result.data)
+	})
+	ajax('http://192.168.40.222:3000/identify/verifyCode',function(msg){
+		console.log(msg)
+		$('#aa').innerHTML = msg.data
+	})
+	
+	$('#aa').onclick = function(){
+		ajax('http://192.168.40.222:3000/identify/verifyCode',function(msg){
+		console.log(msg)
+		$('#aa').innerHTML = msg.data
+	})
+	}*/
+	
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+

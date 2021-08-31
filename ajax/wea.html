@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>天气</title>
+	<style type="text/css">
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			background: url(img/cityBg.png);
+
+		}
+		.odiv{
+			width: 750px;
+			height: 450px;
+			margin: 0 auto;
+			margin-top: 50px;
+			overflow: hidden;
+			position: relative;
+		}
+		.odiv ul{
+			width: 1800px;
+			height: 100%;
+			overflow: hidden;
+			list-style: none;
+			position: absolute;
+		}
+		li:first-child{
+			opacity: 0.5;
+		}
+		li{
+			float: left;
+			width: 102px;
+			height: 100%;
+			background-color: rgba(35,110,200,0.9);
+			margin-right: 6px;
+		}
+		.odiv ul li p{
+			text-align: center;
+			color: #fff;
+			margin-top: 20px;
+		}
+		.slide{
+			position: absolute;
+			top:200px;
+			width: 20px;
+			height: 20px;
+			border:solid 2px #fff;
+			border-radius: 50%;
+			z-index: 10;
+			color: #fff;
+			text-align: center;
+			font-weight: bolder;
+			line-height: 20px;
+			cursor: pointer;
+		}
+		#prev{
+			left: 0px;
+		}
+		#next{
+			right: 0px;
+		}
+
+		#echart{
+			position: absolute;
+			top:160px;
+			left: -6px;
+		}
+		#echartFiftwenmax{
+			width: 1796px;
+			height:60px;
+		}
+		#echartFiftwenmin{
+			width: 1796px;
+			height:60px;
+		}
+
+	</style>
+</head>
+<body>
+<div class="odiv">
+	<ul>
+		<li>
+			<p>昨天</p>
+			<p>08/17</p>
+			<p>多云</p>
+			<p><img width="30" src="img/d01.png" /></p>
+			<p style="margin-top: 140px ">多云</p>
+			<p><img width="30" src="img/d01.png" /></p>
+			<p>东南风 微风</p>
+		</li>
+	</ul>
+	<!-- <div id="echart">
+		<div id="echartFiftwenmax"></div>
+		<div id="echartFiftwenmin"></div>
+	</div> -->
+	<div class="slide" id="prev">&lt;</div>
+	<div class="slide" id="next">&gt;</div>
+</div>
+<script src="js/common.js"></script>
+<script src="js/move.js"></script>
+<script src="js/echarts4.8.0.min.js"></script>
+
+<script>
+	var list_obj = {
+		prev : $('#prev'),
+		next : $('#next'),
+		ul : $('ul'),
+		width : 108,
+		index : 0,
+		num : 9,
+		fn : function(){
+			if(this.id === 'prev'){//上一个
+				if(list_obj.index >0){
+					list_obj.index--;
+					move(list_obj.ul,{
+						left : -list_obj.width*list_obj.index
+					});
+				}
+			}else{//下一个
+				if(list_obj.index<9){
+					list_obj.index++;
+					move(list_obj.ul,{
+						left : -list_obj.width*list_obj.index
+					});
+				}
+			}
+		}
+	}
+
+	list_obj.prev.onclick = list_obj.fn;
+	list_obj.next.onclick = list_obj.fn;
+	var dx,dy;
+	list_obj.ul.onmousedown = function(e){
+		dx = e.clientX-this.offsetLeft;
+		this.onmousemove = function(e){
+			this.style.left = e.clientX-dx+'px';
+		}
+		this.onmouseup = function(e){
+			this.onmousemove = null;
+			list_obj.index = Math.abs(Math.round(parseInt(this.offsetLeft/108)));
+			//console.log(Math.round(parseInt(this.offsetLeft/108)))
+			move(list_obj.ul,{
+				left : Math.round(parseInt(this.offsetLeft/108))*108
+			})
+		}
+	}
+
+	ajax({
+		url : 'data/wea.json',
+		callback : function(msg){
+			var data = msg.data.forecast15d;
+			var ul = $('ul');
+			var arr = [];
+			var el;
+			for(var i=0;i<data.length;i++){
+				el = data[i];
+				arr.push(`
+					<li>
+						<p>${getWeek(i,el)}</p>
+						<p>${el.forecasttime}</p>
+						<p>${el.weather_am}</p>
+						<p><img width="30" src="img/${el.weather_am_pic}.png" /></p>
+						<p style="margin-top: 140px ">${el.weather_pm}</p>
+						<p><img width="30" src="img/${el.weather_pm_pic}.png" /></p>
+						<p>${el.winddir_pm} ${el.windpower_pm}</p>
+					</li>
+				`);
+			}
+
+			ul.innerHTML = arr.join('')
+		}
+	});
+
+	function getWeek(index,el){
+		var str;
+		switch(index){
+			case 0 :
+				str = '昨天';
+				break;
+			case 1 : 
+				str = '今天';
+				break;
+			case 2 : 
+				str = '明天';
+				break;
+			default:
+				str = el.week;
+		}
+		return str;
+
+	}
+</script>
+</body>
+</html>

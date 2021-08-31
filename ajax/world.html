@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>世界六大洲</title>
+	<style type="text/css">
+		.odiv{
+			width: 630px;
+			margin:0 auto;
+			border:solid 1px #ccc;
+		}
+		.w-tap{
+			width: 100%;
+			height: 30px;
+			overflow: hidden;
+		}
+		.w-zhou{
+			float: left;
+			width: 100px;
+			height: 30px;
+			line-height: 28px;
+			text-align: center;
+			background-color: #d4defb;
+			margin-right: 2px;
+			cursor: pointer;
+			border-top: 2px solid transparent;
+		}
+		/*.w-zhou:hover{
+			border-top: 2px solid #3356b6;
+			background-color: #fff;
+		}*/
+		.on{
+			border-top: 2px solid #3356b6;
+			background-color: #fff;
+		}
+		.w-con{
+			width: 100%;
+			min-height: 100px;
+			
+		}
+		.wl-header{
+			height: 30px;
+			line-height: 30px;
+			background-color: #d4defb;
+			text-indent: 20px;
+		}
+		.wl-con{
+			overflow: hidden;
+		}
+		.capital{
+			float: left;
+			padding: 5px;
+			margin: 5px;
+			border:solid 1px #ccc;
+		}
+		.capital i{
+			font-style: normal;
+			display: block;
+		}
+	</style>
+</head>
+<body>
+<div class="odiv">
+	<div class="w-tap"></div>
+	<div class="w-con">
+		<div class="w-list">
+			<p class="wl-header">A</p>
+			<div class="wl-con">
+				<span class="capital">
+					<label>阿塞拜疆</label>
+					<i>Azerbaijan</i>
+				</span>
+				<span class="capital">
+					<label>阿塞拜疆</label>
+					<i>Azerbaijan</i>
+				</span>
+			</div>
+		</div>
+	</div>
+</div>
+<script src="common.js"></script>
+<script>
+
+	var _world = {
+		data : [],
+		'w-tap' : $('.w-tap'),
+		'w-con' : $('.w-con')
+	}
+	/*
+	 * @描述 事件集合
+	*/
+	function eventList(){
+		/*
+		 * @描述 将事件委托到class为w-tap的元素上
+		*/
+		_world['w-tap'].onclick = function(e){
+			var target = e.target;
+			var lists = $('span.on',this);
+			lists.classList.remove('on');
+			target.classList.add('on');
+			getCountryByState(target.getAttribute('typeNum'))
+			
+		}
+	}
+	/*
+	 * @描述 获取数据
+	*/
+	function getData(){
+
+		/*
+		 * @获取json
+		*/
+		ajax({
+			url : 'data/world.json',
+			async : 'false',
+			callback : function(msg){
+				_world.data = msg.data;
+				var arr = [];
+				for(var i=0;i<msg.data.length;i++){
+					arr.push(`
+						<span typeNum="${msg.data[i].typeNum}" class="w-zhou${fn(i)}">${msg.data[i].type}</span>
+					`);
+				}
+
+			_world['w-tap'].innerHTML = arr.join('');
+			}
+		});
+		function fn(index){
+			return index === 0 ? ' on':'';
+		}
+	}
+	/*
+	 * @描述 根据洲来获取国家
+	*/
+	function getCountryByState(num){
+		var data = _world.data;
+		var html_arr = [];
+		var arr;
+		for(var i=0;i<data.length;i++){
+			if(data[i].typeNum == num){
+				arr = data[i].data;
+				break;
+			}
+		}
+
+		for(var i=0;i<arr.length;i++){
+			html_arr.push(`
+				<div class="w-list">
+					<p class="wl-header">${arr[i].isparam}</p>
+					<div class="wl-con">
+						${getSpan(arr[i].data)}
+					</div>
+				</div>
+			`);
+		}
+
+		_world['w-con'].innerHTML = html_arr.join('')
+
+
+		
+
+	}
+
+	function getSpan(data){
+		var arr = [];
+		for(var i=0;i<data.length;i++){
+			arr.push(`
+				<span class="capital">
+					<label>${data[i].sdcn}</label>
+					<i>${data[i].sden}</i>
+				</span>
+			`);
+		}
+		return arr.join('')
+	}
+
+	/*
+	 * @描述 初始化
+	*/
+
+	function init(){
+		getData();
+		eventList();
+		getCountryByState(1);
+	}
+	init();
+</script>
+</body>
+</html>
