@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>网站</title>
+<meta http-equiv="Access-Control-Allow-Origin" content="*" />
+<style>
+.odiv{
+	width:1000px;
+	margin:0 auto;
+}
+[name=code]{
+	width:57px;
+}
+
+</style>
+</head>
+<body>
+<div class='odiv'>
+	<table>
+		<tr>
+			<td><input type='text' name='username' /></td>
+		</tr>
+		<tr>
+			<td><input type='password' name='password' /></td>
+		</tr>
+		<tr>
+			<td>
+			<input type='text' name='code' />
+			<span id='icode'></span>
+			</td>
+		</tr>
+		<tr>
+			<td>
+				<button name='submit'>登录</button>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class='aa'></div>
+
+<script src='js/common.js'></script>
+<script>
+	var odiv = $('.odiv');
+	function getCode(){
+		ajax({
+			url : 'http://192.168.40.113:3000/identify/verifyCode',
+			callback : function(msg){
+				
+				$('#icode').innerHTML = msg.data;
+			}
+		})
+	}
+	//getCode();
+	
+	$('#icode').onclick = function(){
+		getCode();
+	}
+	
+	load({
+		el : $('.aa'),
+		url : 'html/login.html',
+		callback : function(msg){
+			console.log(msg)
+		}
+	})
+	
+	
+	
+	/*ajax({
+		url : 'http://192.168.40.113:3000/users/ceshi',
+		param : 'username=aa&password=123',
+		method : 'POST',
+		async : 'false',
+		callback : function(msg){
+			console.log(msg);
+		}
+	});*/
+	
+	//http://192.168.40.113:3000/identify/verifyCode
+	var _str = '<md name="dragon"  age="12"  address="asd" />';
+	getModuleByLabel(_str)
+	
+</script>
+
+</body>
+</html>
+

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>贴吧</title>
+	<style type="text/css">
+		*{
+			padding: 0;
+			margin: 0;
+		}
+		.odiv{
+			position: relative;
+			width: 308px;
+			height: 180px;
+			margin: 0 auto;
+			margin-top: 50px;
+			background: url(img/tieba_bg.png) no-repeat 0 0;
+		}
+		.odiv:hover{
+			background: url(img/tieba_bg.png) no-repeat 0 -184px;
+		}
+		ul{
+			position: absolute;
+			width: 210px;
+			height: 29px;
+			left: 56px;
+			top: 75px;
+			list-style: none;
+			overflow: hidden;
+		}
+		li{
+			float: left;
+			width: 16px;
+			height: 23px;
+			background: url(img/tieba_bg.png) -263px -371px;
+			margin-right: 6px;
+			padding: 2px 2px 4px;
+
+		}
+		.num{
+			background: url(img/tieba.png);
+			display: block;
+			height: 100%;
+		}
+		.num_0{
+			background-position: -2px -272px;
+		}
+		.num_1{
+			background-position: -2px -29px;
+		}
+		.num_2{
+			background-position: -2px -56px;
+		}
+		.num_3{
+			background-position: -2px -83px;
+		}
+		.num_4{
+			background-position: -2px -110px;
+		}
+		.num_5{
+			background-position: -2px -137px;
+		}
+		.num_6{
+			background-position: -2px -164px;
+		}
+		.num_7{
+			background-position: -2px -191px;
+		}
+		.num_8{
+			background-position: -2px -218px;
+		}
+		.num_9{
+			background-position: -2px -245px;
+		}
+	</style>
+</head>
+<body>
+<div class="odiv">
+	<ul>
+		
+	</ul>
+</div>
+<script src="js/common.js"></script>
+<script src="js/move.js"></script>
+<script>
+	var odiv = $('.odiv');
+	var ul = $('ul',odiv);
+	var len = 8;
+	var config = {
+		num_0:-2,
+		num_1:-29,
+		num_2:-56,
+		num_3:-83,
+		num_4:-110,
+		num_5:-137,
+		num_6:-164,
+		num_7:-191,
+		num_8:-218,
+		num_9:-245
+	};
+
+	var arr = '23476545'
+
+	var li;
+	for(var i=0;i<arr.length;i++){
+		li = document.createElement('li');
+		li.innerHTML = `<span des="num_${arr[i]}" class='num num_${arr[i]}'></span>`;
+		ul.appendChild(li);
+		getToDes(li)
+	}
+
+	function getToDes(el){
+		move($('span',el),{
+			backgroundPositionY:config[$('span',el).getAttribute('des')]
+		})
+	}
+	var json
+	fetch('data/car.json').then(function(res){
+		return res.json();
+	}).then(function(msg){
+		//console.log(msg)
+		json = msg;
+	})
+	
+	//async await
+	
+</script>
+</body>
+</html>

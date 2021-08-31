@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>主页</title>
+	<style type="text/css">
+		.odiv{
+			width: 1000px;
+			margin: 0 auto;
+		}
+		.info{
+			overflow: hidden;
+		}
+		.favor{
+			float: left;
+			padding:10px;
+			margin: 5px;
+			border:solid 1px #000;
+			cursor: pointer;
+		}
+		.favor:hover{
+			background-color: blue;
+			color:#fff;
+		}
+	</style>
+</head>
+<body>
+<div class="odiv">
+	<div class="header">
+		<span id='user'></span>
+		<span id="logout">退出</span>
+	</div>
+	<div class="info"></div>
+</div>
+<script src='common.js'></script>
+<script>
+	function login(){
+		if(cookie.get('username')){
+			$('#user').innerHTML=cookie.get('username')+'欢迎光临！'
+			$('#logout').style.display = 'block'
+			ajax({
+				url : 'data/info.json',
+				callback : function(msg){
+					var arr = [];
+					var str='';
+					for(var i=0;i<msg.length;i++){
+						if(msg[i].username===cookie.get('username')){
+							arr = msg[i].lists;
+							break;
+						}
+					}
+
+					for(var i=0;i<arr.length;i++){
+						str += '<span class="favor">'+arr[i]+'</span>'
+					}
+					$('.info').innerHTML = str;
+				}
+			});
+		}else{
+			$('#user').innerHTML='<a href="login.html">请登录</a>'
+			$('#logout').style.display = 'none'
+			$('.info').innerHTML = '<h1>请登录！</h1>'
+		}
+	}
+	login();
+	//退出
+	$('#logout').onclick = function(){
+		cookie.remove('username')
+		login();
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>模糊查询</title>
+	<style type="text/css">
+		.odiv{
+			width: 500px;
+			margin: 0 auto;
+			margin-top: 100px;
+		}
+		#txt{
+			width: 400px;
+			height: 50px;
+			font-size: 20px;
+			text-indent: 10px;
+		}
+		#res{
+			position: absolute;
+			border:solid 1px #ccc;
+			background: #fff;
+			height: 300px;
+			overflow-y:auto;
+			display: none;
+		}
+		.red{
+			color:red;
+		}
+		p{
+			padding: 6px 0px;
+			cursor: pointer;
+		}
+		p:hover{
+			background: blue;
+			color:white;
+		}
+	</style>
+</head>
+<body>
+<div class="odiv">
+	<input type="text" id="txt" placeholder="请输入" />
+</div>
+
+<div id="res"></div>
+<script src="js/common.js"></script>
+<script>
+	var txt = $('#txt');
+	var res = $('#res');
+
+	txt.onkeyup = function(){
+		getPosition();
+	}
+
+	txt.onblur = function(){
+		setTimeout(function(){
+			res.style.display = 'none'
+		},300);
+		
+	}
+
+	function getPosition(){
+		res.style.cssText = `
+			top:${txt.offsetTop+txt.offsetHeight}px;
+			left:${txt.offsetLeft}px;
+			width:${txt.offsetWidth}px;
+			display:block;
+		`;
+		getDataByInput();
+	}
+
+	function getDataByInput(){
+		ajax({
+			url : 'data/areaList.json',
+			callback : function(msg){
+				var arr = [];
+				for(var i=0;i<msg.length;i++){
+					if(msg[i]['districtcn'].indexOf(txt.value)!==-1||msg[i]['provcn'].indexOf(txt.value)!==-1||msg[i]['namecn'].indexOf(txt.value)!==-1){
+						arr.push(`
+							<p onclick="getValue(this)" id="${msg[i]['stationid']}">${changeValue(`${msg[i]['provcn']}-${msg[i]['districtcn']}-${msg[i]['namecn']}`)}</p>
+						`);
+					}
+				}
+				res.innerHTML = arr.join('')
+			}
+		});
+	}
+
+	function getValue(obj){
+		txt.value = obj.innerText
+	}
+
+	function changeValue(val){
+		var reg = new RegExp(txt.value,'g');
+		var res = val.replace(reg,`<span class="red">${txt.value}</span>`);
+		return res;
+	}
+</script>
+</body>
+</html>

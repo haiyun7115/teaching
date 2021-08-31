@@ -1,0 +1,235 @@
+/*
+ * @作者 张三 李四
+ * @功能 提供公共方法
+ * @日期 2021.6.18
+*/
+
+/*
+ * @方法 $
+ * @描述 根据参数来获取元素
+ * @参数 css css表达式 例如：span[name=aa]
+ * @参数 el 元素对象 例如：document.getElementById('aa')
+ * @返回 元素 
+ * @示例 $('.aa',document.getElementById('aa'))
+ 	$('.aa',$('#bb'))
+ */
+function $(css,el){
+	el = el || document;
+	return el.querySelector(css);
+}
+/*
+ * @方法 _
+ * @描述 根据参数来获取元素集合
+ * @参数 css css表达式 例如：span[name=aa]
+ * @参数 el 元素对象 例如：document.getElementById('aa')
+ * @返回 元素集合 
+ * @示例 _('.aa',document.getElementById('aa'))
+ 	_('.aa',$('#bb'))
+ */
+function _(css,el){
+	el = el || document;
+	return el.querySelectorAll(css);
+}
+/*
+ * @方法 each
+ * @描述 数组循环并执行自定义函数
+ * @参数 arr 数组(包含类数组)
+ * @参数 callback 回调函数
+ * @返回 没有返回
+ * @示例 each([1,2,3],function(el,index){
+		console.log(el,index)
+		//el代表元素，index代表下标
+ 	})
+*/
+function each(arr,callback){
+	for(var i=0;i<arr.length;i++){
+		callback(arr[i],i);
+	}
+}
+/*
+ * @方法 makeListToArray
+ * @描述 将集合转换成数组
+ * @参数 list 集合
+ * @返回 将转换的数组返回
+*/
+function makeListToArray(list){
+	var arr = [];
+	for(var i=0;i<list.length;i++){
+		arr.push(list[i]);
+	}
+	return arr;
+}
+/*
+ * @方法 extend
+ * @描述 将多个对象参数复制到一个对象中
+ * @参数 第一个参数是目标对象，其它所有的对象都复制到这个对象中
+ * @示例 extend({},{name:123},{age:21});
+*/
+function extend(){
+	//arguments 所有的参数集合
+	var arr = makeListToArray(arguments);
+	var obj = arr.shift();
+	var element;
+	for(var i=0;i<arr.length;i++){
+		element = arr[i];
+		for(var index in element){
+			obj[index] = element[index];
+		}
+	}
+
+	return obj;
+}
+
+/*
+ * @描述 创建XMLHttpRequest
+ * @函数 getRequest
+ * @返回 XMLHttpRequest对象
+*/
+function getRequest(){
+	var xmlHttp;
+	if(window.XMLHttpRequest){
+		xmlHttp = new XMLHttpRequest();
+	}else{
+		xmlHttp = new ActiveXObject('Microsoft.XMLHTTP');
+	}
+	
+	return xmlHttp;
+}
+/*
+ * @描述 发送请求，接收数据
+*/
+
+function ajax(obj){
+	var url = obj.url,
+		method = obj.method || 'GET',
+		param = obj.param || '',
+		//async必须是字符串
+		async = obj.async || true,
+		callback = obj.callback || function(){};
+	var xmlHttp = getRequest();
+	xmlHttp.onreadystatechange = function(){
+		if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+			if(xmlHttp.responseXML){
+				callback(xmlHttp.responseXML);
+				return;
+			}
+			callback(JSON.parse(xmlHttp.responseText));
+		}
+	}
+	
+	xmlHttp.open(method,url,eval(async));
+	if(method === 'POST'){
+		xmlHttp.setRequestHeader ("content-type", "application/x-www-form-urlencoded" )		
+	}
+	xmlHttp.send(param);
+}
+/*
+ * @描述 加载页面
+ * @函数 load
+ * @参数 obj 里面包括obj.el 元素对象
+ * @参数 obj.url 地址
+ * @示例 load({
+	 el : $('#id'),
+	 url : '地址'
+ });
+*/
+function load(obj){
+	var el = obj.el;
+	var url = obj.url;
+	var xmlHttp = getRequest();
+	xmlHttp.onreadystatechange = function(){
+		
+		if(xmlHttp.readyState == 4 && xmlHttp.status == 200){
+			
+			el.innerHTML = xmlHttp.responseText;
+			//console.log(xmlHttp.responseText)
+			var str=xmlHttp.responseText;
+			var reg = /<script\s*(.*)><\/script>/g
+			var script=str.match(/<(script\s*|script\s+src='(.+)')><\/\s*script>/g)
+			//console.log(script)
+			var _script//=reg.exec(str)
+			while((_script=reg.exec(str))!=null){
+				console.log(_script[1].replace(/"|'/g,'').split('='))
+				createScript(_script[1].replace(/"|'/g,'').split('=')[1])
+			}
+			//console.log(reg.exec(str),reg.exec(str))
+		}
+	}
+	
+	xmlHttp.open('GET',url,true);
+	xmlHttp.send();
+}
+
+function createScript(src){
+	var script = document.createElement('script');
+	script.setAttribute('src',src);
+	document.body.appendChild(script)
+}
+
+var cookie = {};
+/*
+ * @描述 设置cookie
+ * @函数 cookie.set
+ * @参数
+*/
+cookie.set = function(key,value,day){
+	day = day || 1;
+	var date = new Date();
+	var expires;
+	date.setTime(date.getTime()+day*24*60*60*1000);
+	expires = 'expires='+date.toGMTString();
+	document.cookie=key+'='+value+';'+expires+';path=/';
+}
+/*
+ * @描述 获取cookie
+ * @函数 cookie.get
+ * @参数 key
+*/
+cookie.get = function(key){
+	var cookie = document.cookie;
+	var arr = cookie.split(';');
+	var obj = {};
+	var element;
+	for(var i=0;i<arr.length;i++){
+		element=arr[i].split('=');
+		obj[element[0]] = element[1];
+	}
+	return obj[key] ? obj[key] : obj[' '+key];
+}
+/*
+ * @描述 删除cookie
+ * @函数 cookie.remove
+ * @参数 key 键
+*/
+cookie.remove = function(key){
+	cookie.set(key,cookie.get(key),-1);
+}
+
+var getModuleByLabel = (function(){
+	var reg = /<[a-z]{1,10}\s+(.+)\s*\/>/g;
+	var reg = /^<[a-z]{1,10}(\s+[a-z]{1,10}=(('[^'"]+')|("[^'"]+")))*\s*\/>$/
+	function changeArrayToObj(s){
+		var arr = reg.exec(s);
+		var res = arr[1].replace(/"|'|^\s+|\s+$/g,'');
+		var _arr = res.split(/\s+/);
+		var obj = {};
+		var element;
+		each(_arr,(el,index)=>{
+			element = el.split('=');
+			obj[element[0]] = element[1];
+		})
+		return obj
+	}
+	return function(s){
+		var o = changeArrayToObj(s);
+		console.log(o)
+		
+	}
+}());
+
+
+
+
+
+
+

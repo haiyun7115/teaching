@@ -1,0 +1,75 @@
+{
+    "code": 200,
+    "data": [{
+        "levelIndex": "严重污染",
+        "districtcn": "临夏",
+        "AQI": "500",
+        "namecn": "临夏",
+        "provcn": "甘肃"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "巴音郭楞",
+        "AQI": "500",
+        "namecn": "库尔勒",
+        "provcn": "新疆"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "兰州",
+        "AQI": "500",
+        "namecn": "兰州",
+        "provcn": "甘肃"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "阿克苏",
+        "AQI": "500",
+        "namecn": "阿克苏",
+        "provcn": "新疆"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "铁门关",
+        "AQI": "500",
+        "namecn": "铁门关",
+        "provcn": "新疆"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "白银",
+        "AQI": "477",
+        "namecn": "白银",
+        "provcn": "甘肃"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "定西",
+        "AQI": "477",
+        "namecn": "定西",
+        "provcn": "甘肃"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "呼伦贝尔",
+        "AQI": "442",
+        "namecn": "海拉尔",
+        "provcn": "内蒙古"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "海东",
+        "AQI": "422",
+        "namecn": "平安",
+        "provcn": "青海"
+    },
+    {
+        "levelIndex": "严重污染",
+        "districtcn": "固原",
+        "AQI": "363",
+        "namecn": "固原",
+        "provcn": "宁夏"
+    }],
+    "message": "successful",
+    "pageNum": null
+}

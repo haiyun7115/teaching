@@ -1,0 +1,45 @@
+<div class='login'>
+	<table>
+		<tr>
+			<td><input type='text' name='username' /></td>
+		</tr>
+		<tr>
+			<td><input type='password' name='password' /></td>
+		</tr>
+		<tr>
+			<td><span id='icode'></span></td>
+		</tr>
+		<tr>
+			<td>
+				<button name='submit'>登录</button>
+			</td>
+		</tr>
+	</table>
+</div>
+<script src="js/aa.js"></script>
+<script src='js/bb.js'></script>
+<script>
+	var submit=$('[name=submit]');
+	var register=$('[name=register]');
+	console.log(11);
+	register.onclick = function(){
+		load({
+			el : $('.odiv'),
+			url : 'html/register.html',
+			callback : function(msg){
+				console.log(msg)
+			}
+		})
+	}
+	
+</script>
+
+
+
+
+
+
+
+
+
+

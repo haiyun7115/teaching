@@ -1,0 +1,80 @@
+{
+    "code": 200,
+    "data": [{
+        "airportname": "北京首都国际机场",
+        "areaid": "101010100",
+        "id": "JCCN100005"
+    },
+    {
+        "airportname": "北京大兴国际机场",
+        "areaid": "101011100",
+        "id": "JCCN100224"
+    },
+    {
+        "airportname": "上海浦东国际机场",
+        "areaid": "101020100",
+        "id": "JCCN100117"
+    },
+    {
+        "airportname": "广州白云国际机场",
+        "areaid": "101280101",
+        "id": "JCCN100037"
+    },
+    {
+        "airportname": "成都双流国际机场",
+        "areaid": "101270101",
+        "id": "JCCN100160"
+    },
+    {
+        "airportname": "深圳宝安国际机场",
+        "areaid": "101280601",
+        "id": "JCCN100048"
+    },
+    {
+        "airportname": "昆明长水国际机场",
+        "areaid": "101290101",
+        "id": "JCCN100089"
+    },
+    {
+        "airportname": "西安咸阳国际机场",
+        "areaid": "101110200",
+        "id": "JCCN100075"
+    },
+    {
+        "airportname": "上海虹桥国际机场",
+        "areaid": "101021300",
+        "id": "JCCN100121"
+    },
+    {
+        "airportname": "重庆江北国际机场",
+        "areaid": "101040100",
+        "id": "JCCN100139"
+    },
+    {
+        "airportname": "杭州萧山国际机场",
+        "areaid": "101210101",
+        "id": "JCCN100102"
+    },
+    {
+        "airportname": "南京禄口国际机场",
+        "areaid": "101190101",
+        "id": "JCCN100114"
+    },
+    {
+        "airportname": "郑州新郑国际机场",
+        "areaid": "101180101",
+        "id": "JCCN100052"
+    },
+    {
+        "airportname": "厦门高崎国际机场",
+        "areaid": "101230201",
+        "id": "JCCN100093"
+    },
+    {
+        "airportname": "武汉天河国际机场",
+        "areaid": "101200101",
+        "id": "JCCN100054"
+    }],
+    "message": "successful",
+    "pageNum": null
+}
